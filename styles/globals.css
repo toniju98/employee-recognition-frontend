@@ -19,3 +19,5 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@import url('https://cdn.jsdelivr.net/npm/@svgmoji/twemoji@3.1.0/fonts/twemoji-mozilla.css');
