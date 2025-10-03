@@ -1,6 +1,6 @@
-# 🏆 Hospitality Recognition Platform
+# 🏆 Employee Recognition Platform
 
-A modern employee recognition and rewards platform designed specifically for the hospitality industry. This application enables employees to recognize their colleagues' achievements, earn points, and redeem rewards while providing administrators with comprehensive analytics and management tools.
+A modern employee recognition and rewards platform designed for organizations of all types. This application enables employees to recognize their colleagues' achievements, earn points, and redeem rewards while providing administrators with comprehensive analytics and management tools.
 
 ## ✨ Features
 
@@ -58,8 +58,8 @@ A modern employee recognition and rewards platform designed specifically for the
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/hospitality-recognition.git
-   cd hospitality-recognition
+   git clone https://github.com/yourusername/employee-recognition.git
+   cd employee-recognition
    ```
 
 2. **Install dependencies**
@@ -87,7 +87,7 @@ A modern employee recognition and rewards platform designed specifically for the
 ## 📁 Project Structure
 
 ```
-hospitality-recognition/
+employee-recognition/
 ├── app/                    # Next.js app directory
 │   ├── (admin)/           # Admin routes
 │   ├── (dashboard)/       # Dashboard routes
@@ -168,9 +168,20 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you encounter any issues or have questions, please:
 
-1. Check the [Issues](https://github.com/yourusername/hospitality-recognition/issues) page
+1. Check the [Issues](https://github.com/yourusername/employee-recognition/issues) page
 2. Create a new issue with detailed information about your problem
 3. Include steps to reproduce the issue
+
+## 🎯 Use Cases
+
+This platform is perfect for:
+- **Corporate Environments**: Teams recognizing colleagues for outstanding work
+- **Healthcare Organizations**: Staff acknowledging exceptional patient care
+- **Educational Institutions**: Faculty and staff recognizing contributions
+- **Non-Profit Organizations**: Volunteers and staff celebrating impact
+- **Technology Companies**: Engineers and designers appreciating collaboration
+- **Manufacturing**: Workers recognizing safety and efficiency improvements
+- **Any Organization**: Where peer recognition and team building matter
 
 ## 🙏 Acknowledgments
 
@@ -181,4 +192,4 @@ If you encounter any issues or have questions, please:
 
 ---
 
-**Made with ❤️ for the hospitality industry**
+**Made with ❤️ for modern workplaces**
