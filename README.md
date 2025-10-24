@@ -10,40 +10,20 @@ A comprehensive, full-stack employee recognition and rewards management platform
 ## 🚀 Features
 
 ### 🔐 Authentication & Security
-<div align="center">
-  <img src="docs/login-page.png" alt="Login Page" width="600"/>
-  <p><em>Secure Keycloak authentication with modern UI</em></p>
-</div>
-
 - **User Authentication**: Secure login with Keycloak integration
 - **Role-based Access**: Different permissions for admin and regular users
 
 ### 📝 Recognition Management
-<div align="center">
-  <img src="docs/dashboard-overview.png" alt="Dashboard Overview" width="600"/>
-  <p><em>Main dashboard with recognition feed and creation interface</em></p>
-</div>
-
 - **Recognition Management**: Create and view employee recognitions
 - **Points System**: Award points for different types of recognitions
 - **Real-time Updates**: Live recognition feed with instant updates
 
 ### 👤 User Profiles & Management
-<div align="center">
-  <img src="docs/user-profile.png" alt="User Profile" width="600"/>
-  <p><em>Comprehensive user profiles with image upload and achievements</em></p>
-</div>
-
 - **User Profiles**: Manage user information and profile images
 - **Profile Images**: Upload and manage user avatars
 - **Achievements**: Track user accomplishments and points
 
 ### 📱 Responsive Design
-<div align="center">
-  <img src="docs/mobile-view.png" alt="Mobile View" width="300"/>
-  <p><em>Fully responsive design that works on all devices</em></p>
-</div>
-
 - **Responsive Design**: Modern UI that works on all devices
 - **Mobile-First**: Optimized for mobile and tablet experiences
 
@@ -79,11 +59,6 @@ A comprehensive, full-stack employee recognition and rewards management platform
 
 ## 🛠️ Tech Stack
 
-<div align="center">
-  <img src="docs/tech-stack.png" alt="Technology Stack" width="800"/>
-  <p><em>Modern technology stack with React, TypeScript, and Keycloak</em></p>
-</div>
-
 ### Frontend
 - **React 18** with TypeScript
 - **Material-UI (MUI)** for modern UI components
@@ -99,13 +74,6 @@ A comprehensive, full-stack employee recognition and rewards management platform
 - **CORS** enabled for cross-origin requests
 - **Admin Management** APIs for system administration
 - **Rewards System** APIs for catalog and redemption management
-
-## 🏗️ Architecture
-
-<div align="center">
-  <img src="docs/architecture-diagram.png" alt="System Architecture" width="800"/>
-  <p><em>System architecture showing frontend, backend, and authentication flow</em></p>
-</div>
 
 ## 📋 Prerequisites
 
@@ -202,54 +170,29 @@ This application uses Keycloak for authentication. Users must:
 ## 📱 Features Overview
 
 ### Dashboard
-<div align="center">
-  <img src="docs/dashboard-demo.gif" alt="Dashboard Demo" width="800"/>
-  <p><em>Interactive dashboard with real-time recognition feed</em></p>
-</div>
-
 - View all recognitions in a feed
 - Create new recognitions
 - Real-time updates
 
 ### Recognition Management
-<div align="center">
-  <img src="docs/dashboard-overview.png" alt="Recognition Dashboard" width="600"/>
-  <p><em>Complete recognition creation and management system</em></p>
-</div>
-
 - Create recognitions with categories (Teamwork, Innovation, Excellence, Customer Service)
 - Award points (1-10 points)
 - Add personalized messages
 - Select recipients from organization
 
 ### Rewards System
-<div align="center">
-  <img src="docs/RewardsCatalog.PNG" alt="Rewards Catalog" width="600"/>
-  <p><em>Point-based rewards catalog and redemption system</em></p>
-</div>
-
 - Browse comprehensive rewards catalog
 - Redeem rewards using earned points
 - Track redemption history
 - Community-driven reward suggestions
 
 ### Admin Management
-<div align="center">
-  <img src="docs/AdminRewardsManagement.PNG" alt="Admin Interface" width="600"/>
-  <p><em>Administrative interface for system management</em></p>
-</div>
-
 - Manage rewards and catalog items
 - User administration and permissions
 - System configuration and settings
 - Analytics and reporting
 
-### User Management
-<div align="center">
-  <img src="docs/RewardSuggestions.PNG" alt="Community Features" width="600"/>
-  <p><em>Community features and user engagement</em></p>
-</div>
-
+### Community Features
 - User profiles with image upload
 - Community reward suggestions
 - Interactive feedback system
