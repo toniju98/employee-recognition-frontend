@@ -81,7 +81,7 @@ Before running this application, make sure you have:
 
 - **Node.js** (v16 or higher)
 - **npm** or **yarn**
-- **Keycloak Server** running (for authentication)
+- **Keycloak Server** running and configured (for authentication)
 - **Backend API** running (for data management)
 
 ## 🚀 Getting Started
@@ -110,23 +110,7 @@ VITE_KEYCLOAK_REALM=employee-recognition
 VITE_KEYCLOAK_CLIENT_ID=employee-recognition-frontend
 ```
 
-### 4. Keycloak Setup
-
-Run the Keycloak setup script to configure the frontend client:
-
-```bash
-node setup-keycloak.js
-```
-
-Or set environment variables for non-interactive setup:
-
-```bash
-$env:KEYCLOAK_USERNAME="admin"
-$env:KEYCLOAK_PASSWORD="admin"
-node setup-keycloak.js
-```
-
-### 5. Start the Development Server
+### 4. Start the Development Server
 
 ```bash
 npm run dev
