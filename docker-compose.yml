@@ -1,0 +1,6 @@
+services:
+  # Frontend Application
+  employee-recognition-frontend:
+    build: .
+    ports:
+      - "3000:3000"

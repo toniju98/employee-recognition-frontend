@@ -75,6 +75,12 @@ A comprehensive, full-stack employee recognition and rewards management platform
 - **Admin Management** APIs for system administration
 - **Rewards System** APIs for catalog and redemption management
 
+### Deployment & DevOps
+- **Docker** containerization for easy deployment
+- **Docker Compose** for multi-service orchestration
+- **Production-ready** build optimization
+- **Environment-based** configuration
+
 ## 📋 Prerequisites
 
 Before running this application, make sure you have:
@@ -117,6 +123,38 @@ npm run dev
 ```
 
 The application will be available at `http://localhost:3000`.
+
+## 🐳 Docker Deployment
+
+### Using Docker Compose (Frontend Only)
+
+```bash
+# Start the frontend service
+docker-compose up -d
+
+# View logs
+docker-compose logs -f
+
+# Stop service
+docker-compose down
+```
+
+### Using Docker directly
+
+```bash
+# Build the image
+docker build -t employee-recognition-frontend .
+
+# Run the container
+docker run -p 3000:3000 \
+  -e VITE_API_BASE_URL=http://localhost:5000 \
+  -e VITE_KEYCLOAK_URL=http://localhost:8080 \
+  -e VITE_KEYCLOAK_REALM=employee-recognition \
+  -e VITE_KEYCLOAK_CLIENT_ID=employee-recognition-frontend \
+  employee-recognition-frontend
+```
+
+**Note:** This Docker setup is for the frontend only. Make sure your backend services (Keycloak, MongoDB, API) are running separately.
 
 ## 🏗️ Project Structure
 
