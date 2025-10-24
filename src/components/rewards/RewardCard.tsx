@@ -38,7 +38,7 @@ const RewardCard = memo(function RewardCard({ reward }: RewardCardProps) {
       {reward.image && (
         <CardMedia
           component="img"
-          image={`http://localhost:5000/uploads/rewards/${reward.image}`}
+          image={`/uploads/rewards/${reward.image}`}
           alt={reward.name}
         />
       )}

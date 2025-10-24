@@ -1,11 +1,11 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { Recognition } from '@/lib/types/recognition';
 import { fetchRecognitions as apiFetchRecognitions } from '@/lib/utils/api';
 import axios from '@/lib/utils/axios';
 import { useUsers } from './useUsers';
 
 export function useRecognitions() {
-  const [recognitions, setRecognitions] = useState<Recognition[]>([]);
+  const [rawRecognitions, setRawRecognitions] = useState<Recognition[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
   const { users } = useUsers();
@@ -33,6 +33,11 @@ export function useRecognitions() {
     });
   }, [users]);
 
+  // Memoized populated recognitions
+  const recognitions = useMemo(() => {
+    return populateRecognitions(rawRecognitions);
+  }, [rawRecognitions, populateRecognitions]);
+
   const refreshRecognitions = useCallback(async (): Promise<void> => {
     try {
       setLoading(true);
@@ -41,9 +46,8 @@ export function useRecognitions() {
       // Handle paginated response format
       const recognitionsData = data?.data || data;
       const rawRecognitions = Array.isArray(recognitionsData) ? recognitionsData : [];
-      // Populate with user data
-      const populatedRecognitions = populateRecognitions(rawRecognitions);
-      setRecognitions(populatedRecognitions);
+      // Store raw recognitions
+      setRawRecognitions(rawRecognitions);
     } catch (err: any) {
       console.error('Error fetching recognitions:', err);
       console.error('Error details:', {
@@ -53,7 +57,7 @@ export function useRecognitions() {
         message: err?.message
       });
       setError(err instanceof Error ? err : new Error("Failed to fetch recognitions"));
-      setRecognitions([]); // Ensure recognitions is always an array
+      setRawRecognitions([]); // Ensure recognitions is always an array
     } finally {
       setLoading(false);
     }
@@ -62,14 +66,6 @@ export function useRecognitions() {
   useEffect(() => {
     refreshRecognitions();
   }, [refreshRecognitions]);
-
-  // Repopulate recognitions when users data changes
-  useEffect(() => {
-    if (recognitions.length > 0 && users.length > 0) {
-      const populatedRecognitions = populateRecognitions(recognitions);
-      setRecognitions(populatedRecognitions);
-    }
-  }, [users, populateRecognitions]);
 
   return { recognitions, loading, error, refreshRecognitions };
 }
